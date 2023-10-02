@@ -1,6 +1,18 @@
 import module_tools
+from comments import comments_function
+from likes import likes_function
 
 module_tools.say_hello()
+
+while True:
+    action = input('Write your action: [add_like, add_comment]: ')
+    match action:
+        case 'add_like':
+            likes_function.add_like()
+        case 'add_comment':
+            text = input('Write comment text: ')
+            comments_function.add_comment(text)
+
 
 # Repository
 #   -   main.py
